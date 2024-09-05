@@ -28,7 +28,7 @@ public class Main {
         int minutes = seconds / 60;
         int remainingSeconds = seconds % 60;
 
-        return getDurationString(minutes,remainingSeconds); //
+        return getDurationString(minutes,remainingSeconds);
     }
 
     public static String getDurationString(int minutes, int seconds){
@@ -43,9 +43,9 @@ public class Main {
         }
 
         int hours = minutes / 60;
-        minutes = minutes - (hours * 60);
+        int remainingMinutes = minutes % 60;
 
-        return (hours + "h " + minutes + "m " + seconds + "s");
+        return (hours + "h " + remainingMinutes + "m " + seconds + "s");
     }
 
 }
